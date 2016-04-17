@@ -14,7 +14,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/evesdesign.css" rel="stylesheet">
+    <link href="css/cleoandeves.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -31,16 +31,23 @@
 </head>
 
 <body>
-    <nav>
-<div class="custom_nav">
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="nav-collapse">
-                 <ul class="nav nav-pills ">
-                    <li class="sidebar-brand">
-                   <a href="#top" class="brand" onclick = $("#menu-close").click(); ><strong>CLOUDBREAK CAFE</strong></a>
-                    </li>
-                    <ul class="nav nav-pills pull-right">
+   <nav class="navbar navbar-default navbar-fixed-top">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#top" class="brand" onclick = $("#menu-close").click(); >CLOUDBREAK CAFE</a> 
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav-stacked" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+                    <ul class="nav nav-pills">
                     <li>
                         <a href="#smoothies" onclick = $("#menu-close").click(); > SMOOTHIES</a>
                     </li>
@@ -48,24 +55,16 @@
                         <a href="#corevalues" onclick = $("#menu-close").click(); >CORE VALUES</a>
                     </li>
                     <li>
-                        <a href="#ourstory" onclick = $("#menu-close").click(); > OUR STORY</a>
+                        <a href="#ourstory" onclick = $("#menu-close").click(); >OUR STORY</a>
                     </li>
                     <li>
-                        <a href="#contact" class="right-menu"onclick = $("#menu-close").click(); >CONTACT</a>
+                        <a href="#contact" class="right-menu" onclick = $("#menu-close").click(); >CONTACT</a>
                     </li>
                     </ul>
-                </ul>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div><!--/.nav-collapse -->
-           
-        </div><!-- /.navbar-inner -->
-    </div><!-- /.navbar -->
-</div><!--/.custom_nav-->
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
     <!-- Navigation -->
     <!-- Header -->
@@ -202,6 +201,16 @@
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
+
+        //Stack menu when collapsed
+$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
+    $('.nav-pills').addClass('nav-stacked');
+});
+
+//Unstack menu when not collapsed
+$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
+    $('.nav-pills').removeClass('nav-stacked');
+});
 
     // Scrolls to the selected menu item on the page
     $(function() {
