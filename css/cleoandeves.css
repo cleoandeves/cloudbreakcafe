@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * CLEO+EVES DESIGN TEMPLATE: CLEOANDEVES.COM;
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
@@ -22,6 +22,7 @@ body {
 
 .tagline {
     font-family: 'Poiret One', cursive;
+    color: #248ED3;
 }
 
 .brand {
@@ -30,6 +31,7 @@ body {
     padding: 0;
     font-size: 32px;
     margin-left: 50px;
+    color: #248ED3;
 }
 
 .right-menu {
@@ -66,7 +68,7 @@ body {
 
 .btn-light {
     border-radius: 0;
-    color: #333;
+    color: #248ED3;
     background-color: rgb(255,255,255);
 }
 
